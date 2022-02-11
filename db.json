@@ -1,0 +1,47 @@
+{
+  "logs": [
+    {
+      "id": 2,
+      "message": "Sample #1",
+      "tech": "Freddy Kruger",
+      "attention": false,
+      "date": "2022-02-11T16:03:38.794Z"
+    },
+    {
+      "id": 3,
+      "message": "Sample #2",
+      "tech": "Jimmy Hendrix",
+      "attention": false,
+      "date": "2022-02-11T16:03:49.549Z"
+    },
+    {
+      "id": 5,
+      "message": "Sample #3",
+      "tech": "Jimmy Hendrix",
+      "attention": true,
+      "date": "2022-02-11T16:03:59.820Z"
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "Linus",
+      "lastName": "Torvalds"
+    },
+    {
+      "id": 2,
+      "firstName": "Richard",
+      "lastName": "Stallman"
+    },
+    {
+      "id": 3,
+      "firstName": "Barba",
+      "lastName": "Dev"
+    },
+    {
+      "firstName": "Freddy",
+      "lastName": "Kruger",
+      "id": 4
+    }
+  ]
+}
