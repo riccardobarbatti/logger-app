@@ -29,6 +29,11 @@ React Typescript app with Redux Toolkit:
 - Delete Technical
 - Button RollOver animation
 
+<p align="center">
+  <img src="logs-home.jpg" width="960" alt="Main App" />
+  <img src="enter-log.jpg" width="960" alt="Main App" />
+</p>
+
 ## Development
 
 To get a local copy of the code, clone it using git:
