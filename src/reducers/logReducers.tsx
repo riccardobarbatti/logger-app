@@ -12,13 +12,24 @@ import {
 } from "../actions/types";
 import {LogsModel} from "../models/LogsModel";
 
+//Action
+class Action<Payload> {
+    constructor(payload: Payload) {
+        this.type = this.constructor.name;
+        //this.payload = payload;
+        Object.assign(this, payload);
+    }
+    type: string;
+    payload: Payload | undefined; // stub; needed for Is() method's type-inference to work, for some reason
+
+}
 const initialState = {
     logs:[],
     current: null,
     loading: false,
     error: null
 }
-export default (state = initialState, action:any) => {
+export default (state = initialState, action:Action<any>) => {
     switch (action.type) {
         case SET_LOADING:
             return {

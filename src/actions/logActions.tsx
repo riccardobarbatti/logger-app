@@ -9,16 +9,19 @@ import { GET_LOGS,
          SET_CURRENT,
          CLEAR_CURRENT} from "./types";
 
-import {LogsModel} from "../models/LogsModel";
+//import {LogsModel} from "../models/LogsModel";
+import {Dispatch} from "@reduxjs/toolkit";
+interface Logger{
+    id?: number,
+    log: []
 
+}
 //GET LOGS FROM SERVER
-export const getLogs = () => async (dispatch:any) => {
+export const getLogs = () => async (dispatch: Dispatch) => {
 
         try {
             setLoading();
             const {data} = await axios.get(`logs`);
-           // const res = await fetch('/logs');
-            //const data = await res.json();
 
             dispatch({
                 type: GET_LOGS,
@@ -34,7 +37,7 @@ export const getLogs = () => async (dispatch:any) => {
         }
 };
 //ADD new LOG
-export const addLog = (log:any) => async (dispatch:any) => {
+export const addLog = (log:[]) => async (dispatch: Dispatch) => {
 
     try {
         //preload
@@ -60,7 +63,7 @@ export const addLog = (log:any) => async (dispatch:any) => {
     }
 };
 //UPDATE new LOG
-export const updateLog = (log:any) => async (dispatch:any) => {
+export const updateLog = (log:Logger) => async (dispatch: Dispatch) => {
 
     try {
         //preload
@@ -84,7 +87,7 @@ export const updateLog = (log:any) => async (dispatch:any) => {
 };
 
 //DELETE LOGS FROM SERVER
-export const removeLog = (id:any) => async (dispatch:any) => {
+export const removeLog = (id: number) => async (dispatch: Dispatch) => {
 
     try {
         setLoading();
@@ -105,7 +108,7 @@ export const removeLog = (id:any) => async (dispatch:any) => {
     }
 };
 //SEARCH LOGS FROM SERVER
-export const searchLogs = (text:any) => async (dispatch:any) => {
+export const searchLogs = (text: string) => async (dispatch: Dispatch) => {
 
     try {
         setLoading();
@@ -128,7 +131,7 @@ export const searchLogs = (text:any) => async (dispatch:any) => {
 
 //SET STATUS
 // Set current log
-export const setCurrent = (log:any) => {
+export const setCurrent = (log: number) => {
     return {
         type: SET_CURRENT,
         payload: log

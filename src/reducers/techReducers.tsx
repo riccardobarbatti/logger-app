@@ -13,7 +13,19 @@ const initialState = {
     error: null
 };
 
-export default (state = initialState, action:any) => {
+//Action
+class Action<Payload> {
+    constructor(payload: Payload) {
+        this.type = this.constructor.name;
+        //this.payload = payload;
+        Object.assign(this, payload);
+    }
+    type: string;
+    payload: Payload | undefined; // stub; needed for Is() method's type-inference to work, for some reason
+
+}
+
+export default (state = initialState, action:Action<any>) => {
     switch (action.type) {
         case GET_TECHS:
             return {

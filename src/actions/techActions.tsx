@@ -9,9 +9,10 @@ import {
 } from "../actions/types";
 
 import { TechModel } from "../models/TechModel";
+import {Dispatch} from "@reduxjs/toolkit";
 
 //GET LOGS FROM SERVER
-export const getTechs = () => async (dispatch:any) => {
+export const getTechs = () => async (dispatch: Dispatch) => {
 
     try {
         setLoading();
@@ -32,7 +33,7 @@ export const getTechs = () => async (dispatch:any) => {
     }
 };
 //Add Tech with axios
-export const addTech = (tech:any) => async (dispatch:any) => {
+export const addTech = (tech:[]) => async (dispatch: Dispatch) => {
 
     try {
         setLoading();
@@ -44,7 +45,7 @@ export const addTech = (tech:any) => async (dispatch:any) => {
             payload: data
         });
 
-    } catch (err:any) {
+    } catch (err: any) {
         dispatch({
             type: TECHS_ERROR,
             payload: err.response.data
@@ -54,7 +55,7 @@ export const addTech = (tech:any) => async (dispatch:any) => {
 };
 
 //DELETE LOGS FROM SERVER
-export const removeTech = (id:any) => async (dispatch:any) => {
+export const removeTech = (id: number) => async (dispatch: Dispatch) => {
 
     try {
         setLoading();
