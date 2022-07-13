@@ -57,7 +57,7 @@ And then open http://localhost:3000 to view it in the browser.
 npm run json-server
 ```
 
-And then open http://localhost:5000 to view Fake Server Json it in the browser.
+And then open http://localhost:5000 to view Fake Server Json 
 
 
 #### Available Scripts
