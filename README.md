@@ -1,5 +1,5 @@
 <h1 align="center">
-  React Logger App</br> 
+  React Logger</br> 
 Vite + Redux + Typescript
 </h1>
 
